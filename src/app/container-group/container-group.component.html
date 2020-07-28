@@ -1,5 +1,5 @@
   <div class="container main-container" [id]="'container_' + parentId">
-    <div class="accordion" [id]="'accordionExample' + parentId">
+    <div class="accordion" [id]="'accordion' + parentId">
       <div class="card border-none">
         <div class="card-header background-white border-none" [id]="'headingOne' + parentId" style="padding: 0rem 1rem 1rem;">
           <div class="mb-0 d-flex justify-content-between align-items-center">
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <div [id]="parentId" class="collapse show" [attr.data-parent]="'#accordionExample' + parentId">
+        <div [id]="parentId" class="collapse show" [attr.data-parent]="'#accordion' + parentId">
           <div class="card-body" style="padding: 0.5rem;">
             <app-container-condition
               [conditionValues]="groupContent[parentId].inputValues"
