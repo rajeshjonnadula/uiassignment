@@ -1,0 +1,25 @@
+<div class="container my-3 py-3">
+  <section class="d-flex align-items-center justify-content-between my-3">
+    <h2>Create new container</h2>
+    <button type="button" class="btn btn-light text-primary btn-sm">Refesh</button>
+  </section>
+  <mat-divider aria-hidden="true"></mat-divider>
+  <section class="section-holder">
+    <div class="col-6 py-3">
+      <label>Operation name<span style="color: red">*</span></label>
+      <input aria-label="Operation Name" type="text" class="form-control" [(ngModel)]="operationName" required>
+    </div>
+    <div class="col-12 py-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <label>Success logical expression</label>
+        <button type="button" class="btn btn-primary btn-sm" (click)="onConditionBuilderClick()">Condition Builder</button>
+      </div>
+      <textarea aria-label="Condition Builder Textarea" class="form-control text-area-width" [(ngModel)]="logicalExpression"></textarea>
+    </div>
+  </section>
+  <mat-divider aria-hidden="true"></mat-divider>
+  <section class="d-flex justify-content-end">
+    <button type="button" class="btn btn-light text-primary m-2 btn-sm">Cancel</button>
+    <button type="button" class="btn btn-primary m-2 btn-sm" [disabled]="!operationName || !logicalExpression" (click)="saveJob()">Save Job</button>
+  </section>
+</div>

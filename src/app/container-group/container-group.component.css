@@ -1,0 +1,42 @@
+.background-white {
+    background: white;
+}
+
+.border-none {
+    border: 0px;
+}
+
+.main-container {
+    border: solid 1px #ededed;
+    padding: 1rem 0rem 0rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.75rem;
+    width: 97%;
+}
+
+#container_linked_list_1 {
+    width: 100%;
+    margin-left: 0;
+}
+
+::ng-deep .collapsed {
+    transform: rotate(-90deg);
+}
+
+.text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cursor-position {
+    cursor: pointer;
+}
+
+.mat-button-toggle-checked {
+  background-color: #047BFE;
+}
+
+.mat-button-toggle-disabled.mat-button-toggle-checked {
+  background-color: #bdbdbd;
+}

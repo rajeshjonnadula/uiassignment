@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-snack-bar-container {
+    min-width: 50vw !important;
+    background-color: #EBFBD4;
+    color: #3D935B;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 2rem !important;
+}

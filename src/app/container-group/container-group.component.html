@@ -1,0 +1,48 @@
+  <div class="container main-container" [id]="'container_' + parentId">
+    <div class="accordion" [id]="'accordionExample' + parentId">
+      <div class="card border-none">
+        <div class="card-header background-white border-none" [id]="'headingOne' + parentId" style="padding: 0rem 1rem 1rem;">
+          <div class="mb-0 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <span class="material-icons cursor-position" data-toggle="collapse" [attr.data-target]="'#' + parentId" aria-expanded="true" (click)="getQueryString(); isCollapsed = !isCollapsed">
+                expand_more
+              </span>
+              <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+                <!-- <label class="btn btn-sm" [ngClass]="{'btn-primary': isAnd, 'btn-light': !isAnd, 'disabled': isRadioDisabled()}">
+                  <input type="radio" name="options" autocomplete="off" [ngModel]="isAnd" [disabled]="isRadioDisabled()" (click)="onRadioClick(true)" tabindex="0"> AND
+                </label>
+                <label class="btn btn-sm" [ngClass]="{'btn-primary': !isAnd, 'btn-light': isAnd, 'disabled': isRadioDisabled()}">
+                  <input type="radio" name="options" autocomplete="off" [ngModel]="isAnd" [disabled]="isRadioDisabled()" (click)="onRadioClick(false)" tabindex="0"> OR
+                </label> -->
+              </div>
+                <mat-button-toggle-group [name]="'btn-toggle_' + parentId" value="and" [disabled]="isRadioDisabled()">
+                  <mat-button-toggle (click)="onRadioClick(true)" value="and">AND</mat-button-toggle>
+                  <mat-button-toggle (click)="onRadioClick(false)" value="or">OR</mat-button-toggle>
+                </mat-button-toggle-group>
+
+            </div>
+            <span *ngIf="isCollapsed" class="text-overflow col-7" [title]="queryString[parentId]">{{queryString[parentId]}}</span>
+            <div>
+              <button type="button" class="btn btn-outline-primary ml-3 btn-sm" (click)="addConditionContainer()">Add Condition</button>
+              <button type="button" class="btn btn-outline-primary ml-3 btn-sm" (click)="addGroupContainer()">Add Group</button>
+              <button type="button" class="btn btn-link ml-3 btn-sm" (click)="deleteGroupContainer()">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div [id]="parentId" class="collapse show" [attr.data-parent]="'#accordionExample' + parentId">
+          <div class="card-body" style="padding: 0.5rem;">
+            <app-container-condition
+              [conditionValues]="groupContent[parentId].inputValues"
+              (add)="addConditionContainer()"
+              (delete)="deleteConditionContainer($event)"
+              (valueChange)="getQueryString()"
+            ></app-container-condition>
+            <ng-container *ngFor="let childId of groupContent[parentId].childIds">
+              <app-container-group [parentId]="childId" *ngIf="groupContent[childId]"></app-container-group>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

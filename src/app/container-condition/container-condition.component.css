@@ -1,0 +1,32 @@
+.dropdown-growth {
+    flex-grow: 0.5;
+    margin: 5px;
+}
+
+.group-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-color {
+    color: #0062cc;
+    border: solid 1px #ededed;
+    margin: 5px;
+}
+
+.main-container {
+    border: solid 1px #ededed;
+    padding: 1rem 0px 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.75rem;
+    width: 97%;
+}
+
+.look-back {
+    margin-right: 10px;
+}
+
+::ng-deep .form-control {
+    font-size: 0.8rem;
+}

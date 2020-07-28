@@ -1,0 +1,7 @@
+.header {
+    border-bottom: solid 1px #ededed;
+}
+
+.text-area-width {
+    width: calc(100% - 2rem);
+}

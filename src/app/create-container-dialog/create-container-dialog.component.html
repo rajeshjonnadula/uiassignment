@@ -1,0 +1,29 @@
+<div class="container" role="dialog" aria-labelledby="dialogheading">
+    <div class="header">
+        <h1 id="dialogheading">Condition builder for success</h1>
+    </div>
+
+    <div class="input-group row mt-3">
+        <div class="col-sm-12">
+            <label id="logicalexpression">logical expression</label>
+        </div>
+        <div class="w-100 d-flex justify-content-center">
+            <textarea aria-labelledby="logicalexpression" class="form-control text-area-width" [ngModel]="textAreaValue" readonly></textarea>
+        </div>
+    </div>
+    <mat-dialog-content>
+        <div class="input-group row mt-3">
+            <div class="col-sm-12">
+                <span>Condition builder for Success</span>
+                <div class="mt-2">
+                    <app-container-group></app-container-group>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end" style="width: 97%;">
+      <button type="button" class="btn btn-light btn-sm m-2" mat-dialog-close>Cancel</button>
+      <button type="button" class="btn btn-primary btn-sm m-2" [mat-dialog-close]="textAreaValue">Save</button>
+    </mat-dialog-actions>
+</div>
