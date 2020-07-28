@@ -4,7 +4,7 @@
         <div class="card-header background-white border-none" [id]="'headingOne' + parentId" style="padding: 0rem 1rem 1rem;">
           <div class="mb-0 d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
-              <span class="material-icons cursor-position" data-toggle="collapse" [attr.data-target]="'#' + parentId" aria-expanded="true" (click)="getQueryString(); isCollapsed = !isCollapsed">
+              <span  role="button" class="material-icons cursor-position" data-toggle="collapse" [attr.data-target]="'#' + parentId" aria-expanded="true" (click)="getQueryString(); isCollapsed = !isCollapsed" tabindex="0">
                 expand_more
               </span>
               <div class="btn-group btn-group-toggle"  data-toggle="buttons">
