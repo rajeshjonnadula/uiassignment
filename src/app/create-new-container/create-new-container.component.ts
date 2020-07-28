@@ -27,7 +27,8 @@ export class CreateNewContainerComponent implements OnInit {
       height: "calc(100% - 30px)",
       width: "calc(100% - 30px)",
       maxWidth: "90%",
-      maxHeight: "100%"
+      maxHeight: "100%",
+      panelClass: 'condition-builder-dialog'
     });
 
     dialogRef.afterClosed().subscribe(result => {

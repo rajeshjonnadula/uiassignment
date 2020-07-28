@@ -21,7 +21,7 @@
                 </mat-button-toggle-group>
 
             </div>
-            <span *ngIf="isCollapsed" class="text-overflow col-7" [title]="queryString[parentId]">{{queryString[parentId]}}</span>
+            <span *ngIf="isCollapsed" class="text-overflow" [title]="queryString[parentId]">{{queryString[parentId]}}</span>
             <div>
               <button type="button" class="btn btn-outline-primary ml-3 btn-sm" (click)="addConditionContainer()">Add Condition</button>
               <button type="button" class="btn btn-outline-primary ml-3 btn-sm" (click)="addGroupContainer()">Add Group</button>
