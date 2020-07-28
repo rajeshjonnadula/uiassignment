@@ -51,4 +51,9 @@ export class CreateNewContainerComponent implements OnInit {
       this.snackbarConfig(`The ${this.operationName} has been successfully created.`)
     );
   }
+  refresh(){
+    this.operationName = '';
+    this.logicalExpression = '';
+    this.appService.deleteGroup('linked_list_1');
+  }
 }

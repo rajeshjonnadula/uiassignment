@@ -4,26 +4,26 @@
         <div class="row form-group col-10">
           <div class="col-3">
             <label>Type</label>
-            <select class="form-control" [(ngModel)]="conditionValue.type" (change)="onValueChange()">
-              <option *ngFor="let type of types" [value]="type.value">{{type.name}}</option>
+            <select class="form-control" [(ngModel)]="conditionValue.type" (change)="onValueChange()" aria-label="Type">
+              <option *ngFor="let type of types" [value]="type.value" role="menuitem">{{type.name}}</option>
             </select>
           </div>
           <div class="col-3">
             <label>Sub Type</label>
-            <select class="form-control" [(ngModel)]="conditionValue.subType" (change)="onValueChange()">
-              <option *ngFor="let subType of subTypes" [value]="subType.value">{{subType.name}}</option>
+            <select class="form-control" [(ngModel)]="conditionValue.subType" (change)="onValueChange()" aria-label="Sub Type">
+              <option *ngFor="let subType of subTypes" [value]="subType.value" role="menuitem">{{subType.name}}</option>
             </select>
           </div>
           <div class="col-3">
             <label>Status</label>
-            <select class="form-control" [(ngModel)]="conditionValue.status" (change)="onValueChange()">
-              <option *ngFor="let status of statuses" [value]="status.value">{{status.name}}</option>
+            <select class="form-control" [(ngModel)]="conditionValue.status" (change)="onValueChange()" aria-label="Status">
+              <option *ngFor="let status of statuses" [value]="status.value" role="menuitem">{{status.name}}</option>
             </select>
           </div>
           <div class="col-3">
             <label>Operation Name</label>
-            <select class="form-control" [(ngModel)]="conditionValue.operationName" (change)="onValueChange()">
-              <option *ngFor="let operationName of operationNames" [value]="operationName.value">{{operationName.name}}</option>
+            <select class="form-control" [(ngModel)]="conditionValue.operationName" (change)="onValueChange()" aria-label="Operation Name">
+              <option *ngFor="let operationName of operationNames" [value]="operationName.value" role="menuitem">{{operationName.name}}</option>
             </select>
           </div>
         </div>
@@ -40,8 +40,8 @@
         <div *ngIf="conditionValue.type === 'exit_code'" class="row col-6 d-flex justify-content-between">
           <div class="col-6" style="padding-left: 0px">
             <label for="condition_operator">Operator</label>
-            <select class="form-control" [(ngModel)]="conditionValue.operator" (change)="onValueChange()">
-              <option *ngFor="let operator of operators" [value]="operator.value">{{operator.name}}</option>
+            <select class="form-control" [(ngModel)]="conditionValue.operator" (change)="onValueChange()" aria-label="Operator">
+              <option *ngFor="let operator of operators" [value]="operator.value" role="menuitem">{{operator.name}}</option>
             </select>
           </div>
           <div class="col-6" style="padding: 0; padding-right: 15px;">
@@ -52,7 +52,7 @@
         <div *ngIf="conditionValue.subType === 'look_back'" class="row col-6 d-flex flex-column">
           <label>Lookback</label>
           <div class="d-flex">
-            <input class="form-control look-back" type="number" min="0" max="9999" [(ngModel)]="conditionValue.lookbackHour" (change)="onValueChange()">
+            <input class="form-control look-back" type="number" min="0" max="9998" [(ngModel)]="conditionValue.lookbackHour" (change)="onValueChange()">
             <input class="form-control look-back" type="number" min="0" max="59" [(ngModel)]="conditionValue.lookbackMinute" (change)="onValueChange()">
           </div>
         </div>
