@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { QueryBuilderComponent } from './query-builder/query-builder.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -13,9 +12,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
 import { CreateNewContainerComponent } from './create-new-container/create-new-container.component';
-import { ConditionBuilderComponent } from './condition-builder/condition-builder.component';
 import { CreateContainerDialogComponent } from './create-container-dialog/create-container-dialog.component';
 import { ContainerGroupComponent } from './container-group/container-group.component';
 import { ContainerConditionComponent } from './container-condition/container-condition.component';
@@ -40,9 +37,7 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     ],
   declarations: [
     AppComponent,
-    QueryBuilderComponent,
     CreateNewContainerComponent,
-    ConditionBuilderComponent,
     CreateContainerDialogComponent,
     ContainerGroupComponent,
     ContainerConditionComponent,
