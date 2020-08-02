@@ -11,3 +11,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
   line-height: 2rem !important;
 }
+
+/*
+.condition-builder-dialog .mat-dialog-container{
+  overflow-y: hidden !important;
+}
+*/

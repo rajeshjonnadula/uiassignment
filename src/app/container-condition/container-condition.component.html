@@ -1,4 +1,4 @@
-<ng-container *ngFor="let conditionValue of conditionValues">
+<ng-container *ngFor="let conditionValue of conditionValues; let i = index">
   <div class="container main-container">
     <div class="row group-container col-12">
         <div class="row form-group col-10">
@@ -52,8 +52,8 @@
         <div *ngIf="conditionValue.subType === 'look_back'" class="row col-6 d-flex flex-column">
           <label>Lookback</label>
           <div class="d-flex">
-            <input class="form-control look-back" type="number" min="0" max="9998" [(ngModel)]="conditionValue.lookbackHour" (change)="onValueChange()">
-            <input class="form-control look-back" type="number" min="0" max="59" [(ngModel)]="conditionValue.lookbackMinute" (change)="onValueChange()">
+            <input class="form-control look-back" type="number" min="0" max="9999" [(ngModel)]="conditionValue.lookbackHour" (change)="onValueChange(i)">
+            <input class="form-control look-back" type="number" min="0" max="59" [(ngModel)]="conditionValue.lookbackMinute" (change)="onValueChange(i)">
           </div>
         </div>
     </div>

@@ -48,7 +48,23 @@ export class ContainerConditionComponent implements OnInit {
     this.add.emit();
   }
 
-  onValueChange() {
+  onValueChange(index?: number) {
+    if(this.conditionValues[index].lookbackHour < 0) {
+      this.conditionValues[index].lookbackHour = 0;
+    }
+    else if(this.conditionValues[index].lookbackHour > 9999) {
+      this.conditionValues[index].lookbackHour = 9999;
+    }
+    else if(this.conditionValues[index].lookbackHour === 9999){
+      this.conditionValues[index].lookbackMinute=0;
+    }
+
+    if(this.conditionValues[index].lookbackMinute <  0) {
+      this.conditionValues[index].lookbackMinute = 0;
+    }
+    else if(this.conditionValues[index].lookbackMinute > 59) {
+      this.conditionValues[index].lookbackMinute = 59;
+    }
     this.valueChange.emit();
   }
 
